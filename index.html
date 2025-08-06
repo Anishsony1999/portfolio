@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anish N - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --cursor-size: 10px;
+        --cursor-follower-size: 40px;
+        --cursor-color: theme('colors.cyan.400');
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #020617; /* slate-950 */
+        color: #e2e8f0; /* slate-200 */
+        cursor: none;
+      }
+      
+      /* Canvas background for particles */
+      #particle-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      /* Custom Cursor */
+      .custom-cursor, .custom-cursor-follower {
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        mix-blend-mode: difference;
+      }
+      .custom-cursor {
+        width: var(--cursor-size);
+        height: var(--cursor-size);
+        background-color: white;
+      }
+      .custom-cursor-follower {
+        width: var(--cursor-follower-size);
+        height: var(--cursor-follower-size);
+        background-color: white;
+        transition: transform 0.1s linear, opacity 0.3s;
+      }
+
+      /* Scroll Snap Container */
+      .scroll-container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+      }
+      .scroll-section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+      }
+      
+      .scroll-section-wrapper {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        position: relative;
+        z-index: 10;
+        padding: 5rem 0;
+      }
+
+      /* Entrance Animation Keyframes */
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      
+      /* Floating Text Animation */
+      @keyframes slide-up-reveal {
+        0% { transform: translateY(100%); opacity: 0; }
+        15%, 75% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-100%); opacity: 0; }
+      }
+      .sliding-text-item {
+        display: inline-block;
+        animation: slide-up-reveal 3s ease-in-out forwards;
+      }
+      .sliding-text-container {
+        display: inline-block;
+        height: 1.2em; /* Adjust based on font size */
+        line-height: 1.2em;
+        overflow: hidden;
+        vertical-align: bottom;
+      }
+
+      /* Experience timeline animation */
+      .timeline-connector {
+        transition: height 0.5s ease-in-out;
+      }
+      
+      /* --- NEW SKILLS GRID STYLES --- */
+      .skills-grid-container {
+          position: relative;
+          background-color: rgba(15, 23, 42, 0.3);
+          border: 1px solid rgba(51, 65, 85, 0.5);
+          border-radius: 1rem;
+          padding: 2rem;
+          overflow: hidden;
+      }
+      .skills-grid-container::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          border-radius: inherit;
+          background: radial-gradient(
+            400px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+            rgba(20, 184, 166, 0.15),
+            transparent 80%
+          );
+          z-index: 1;
+          pointer-events: none;
+          transition: opacity 0.3s;
+      }
+      .skills-grid {
+          position: relative;
+          z-index: 2;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+          gap: 1rem;
+      }
+      .skill-item {
+          background: rgba(15, 23, 42, 0.6);
+          border: 1px solid rgb(51, 65, 85);
+          border-radius: 0.5rem;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 0.75rem;
+          transition: transform 0.2s ease-out, background 0.2s ease-out, border-color 0.2s ease-out;
+          cursor: default;
+      }
+      .skill-item:hover {
+          transform: translateY(-5px) scale(1.05);
+          background: rgba(30, 41, 59, 0.8);
+          border-color: rgb(14, 165, 233);
+      }
+      .skill-item .skill-icon {
+          width: 2.5rem; /* 40px */
+          height: 2.5rem; /* 40px */
+          color: rgb(148, 163, 184); /* slate-400 */
+          transition: color 0.2s;
+      }
+      .skill-item:hover .skill-icon {
+          color: rgb(56, 189, 248); /* sky-400 */
+      }
+      .skill-item .skill-name {
+          font-weight: 500;
+          color: rgb(203, 213, 225);
+          font-size: 0.875rem;
+      }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
