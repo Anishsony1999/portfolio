@@ -2,7 +2,8 @@
 
 This is my personal developer portfolio built with **Vite + React + TypeScript + Tailwind CSS** and deployed on **GitHub Pages**.
 
-🔗 Live Site:[https://anishsony1999.github.io/portfolio/](https://anishsony1999.github.io/portfolio/)
+> [!NOTE]
+> 🔗 Live Site: [https://anishsony1999.github.io/portfolio/](https://anishsony1999.github.io/portfolio/)
 
 ## 🚀 Features
 
@@ -15,15 +16,17 @@ This is my personal developer portfolio built with **Vite + React + TypeScript +
 
 ## 🛠️ Running Locally
 
-```
+```bash
 # Install dependencies
 npm install
 ```
 
-```
+```bash
 # Start development server
 npm run dev
 ```
+
+```text
 📦 portfolio
 ├── public/
 ├── src/
