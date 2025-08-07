@@ -276,7 +276,7 @@ const App: React.FC = () => {
                 <div className="grid md:grid-cols-5 gap-10 md:gap-16 items-center">
                     <div className="md:col-span-2">
                         <div className="w-full max-w-xs mx-auto md:max-w-none aspect-square rounded-full bg-slate-800 p-2 ring-4 ring-slate-700/50 hover:ring-cyan-500/50 transition-all duration-300 shadow-2xl">
-                            <img src="https://picsum.photos/seed/anish/400/400" alt="Anish N" className="w-full h-full object-cover rounded-full"/>
+                            <img src="https://avatars.githubusercontent.com/u/86650412?v=4" alt="Anish N" className="w-full h-full object-cover rounded-full"/>
                         </div>
                     </div>
                     <div className="md:col-span-3 text-center md:text-left">
@@ -284,7 +284,7 @@ const App: React.FC = () => {
                             A Full Stack Developer with over 1.5 years of hands-on experience, I specialize in building and deploying robust applications using Java Spring Boot and Python Django. My expertise lies in creating RESTful APIs, designing microservices architecture, and developing responsive user interfaces with React. I am well-versed in the complete software development lifecycle (SDLC), from initial development to successful deployment utilizing Docker and CI/CD pipelines.
                         </p>
                         <p className="text-slate-400 italic mb-8">Fun fact: I think I'm funny.</p>
-                        <a href="/anish_n_resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40">
+                        <a href="/anish_n_resume.pdf" download rel="noopener noreferrer" className="inline-block bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40">
                             Download My Resume
                         </a>
                     </div>

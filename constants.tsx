@@ -166,8 +166,8 @@ export const PROJECTS_DATA: Project[] = [
         title: "Travel Recommendation Engine",
         image: "https://picsum.photos/seed/travel/800/600",
         description: "A full-stack tourist application with a Java backend and a Python-based recommendation engine to suggest attractions and hotels.",
-        tags: ["Java", "Python", "Spring Boot", "Hibernate"],
+        tags: ["Java", "Python", "Spring Boot", "Hibernate","Django"],
         codeLink: "https://github.com/Anishsony1999/Treavel",
-        demoLink: "#"
+        //demoLink: "#"
     }
 ];
