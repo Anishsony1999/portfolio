@@ -1,14 +1,36 @@
-# Run and deploy your AI Studio app
+# 💼 Anish Sony — Portfolio
 
-This contains everything you need to run your app locally.
+This is my personal developer portfolio built with **Vite + React + TypeScript + Tailwind CSS** and deployed on **GitHub Pages**.
 
-## Run Locally
+🔗 Live Site:[https://anishsony1999.github.io/portfolio/](https://anishsony1999.github.io/portfolio/)
 
-**Prerequisites:**  Node.js
+## 🚀 Features
 
+- ✨ Modern, responsive single-page UI
+- 🌌 Particle background animation
+- 🧑‍💻 Projects and experience sections
+- 🎯 Animated transitions and custom cursor
+- 🎨 Styled with Tailwind CSS 
+- ⚡ Built with Vite for fast development
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Running Locally
+
+```
+# Install dependencies
+npm install
+```
+
+```
+# Start development server
+npm run dev
+```
+📦 portfolio
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   └── main.tsx
+├── index.html
+├── tailwind.config.js
+└── vite.config.ts
