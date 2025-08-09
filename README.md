@@ -1,4 +1,4 @@
-# 💼 Anish Sony — Portfolio
+# 💼 Anish N — Portfolio
 
 This is my personal developer portfolio built with **Vite + React + TypeScript + Tailwind CSS** and deployed on **GitHub Pages**.
 
