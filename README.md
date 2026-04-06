@@ -25,6 +25,24 @@ npm install
 # Start development server
 npm run dev
 ```
+
+## 📧 Contact Form Email Configuration (EmailJS)
+
+Create a `.env` file in the project root and add:
+
+```bash
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+Then restart the dev server:
+
+```bash
+npm run dev
+```
+
+The contact form in `App.tsx` is now connected to EmailJS and sends real messages when these values are configured.
 ## 📦 portfolio
 
 ```text

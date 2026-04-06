@@ -1,5 +1,44 @@
 import React from 'react';
 import { SkillCategory, Experience, Project } from './types';
+import {
+  SkillIconJava,
+  SkillIconTypeScript,
+  SkillIconJavaScript,
+  SkillIconPython,
+  SkillIconGo,
+  SkillIconPhp,
+  SkillIconHtml,
+  SkillIconCss,
+  SkillIconSpring,
+  SkillIconAngular,
+  SkillIconHibernate,
+  SkillIconDjango,
+  SkillIconFlask,
+  SkillIconReact,
+  SkillIconTailwind,
+  SkillIconBootstrap,
+  SkillIconRxJs,
+  SkillIconSpringSecurity,
+  SkillIconDatabase,
+  SkillIconDocker,
+  SkillIconK8s,
+  SkillIconJenkins,
+  SkillIconGit,
+  SkillIconAws,
+  SkillIconNginx,
+  SkillIconLinux,
+  SkillIconTerminal,
+  SkillIconPostman,
+  SkillIconGrafana,
+  SkillIconPrometheus,
+  SkillIconTempo,
+  SkillIconOpenTelemetry,
+  SkillIconRest,
+  SkillIconMicroservices,
+  SkillIconMVC,
+  SkillIconOOP,
+  SkillIconAgile,
+} from './components/skillIcons';
 
 // --- ICONS ---
 
@@ -75,71 +114,82 @@ export const AWSIconHero = (props: React.SVGProps<SVGSVGElement>) => (
 
 export const SKILLS_DATA: SkillCategory[] = [
   {
-    title: "Languages",
+    title: "Languages & markup",
     skills: [
-      { name: "Java (8-21)", icon: <CodeIcon /> },
-      { name: "Python", icon: <CodeIcon /> },
-      { name: "JavaScript", icon: <CodeIcon /> },
-      { name: "Go", icon: <CodeIcon /> },
-      { name: "PHP", icon: <CodeIcon /> },
-      { name: "HTML5", icon: <CodeIcon /> },
-      { name: "CSS3", icon: <CodeIcon /> },
+      { name: "Java (8–21)", icon: <SkillIconJava /> },
+      { name: "TypeScript", icon: <SkillIconTypeScript /> },
+      { name: "JavaScript", icon: <SkillIconJavaScript /> },
+      { name: "Python", icon: <SkillIconPython /> },
+      { name: "Go", icon: <SkillIconGo /> },
+      { name: "PHP", icon: <SkillIconPhp /> },
+      { name: "HTML5", icon: <SkillIconHtml /> },
+      { name: "CSS3", icon: <SkillIconCss /> },
     ],
   },
   {
-    title: "Frameworks & Libraries",
+    title: "Frameworks & libraries",
     skills: [
-      { name: "Spring Boot", icon: <LayersIcon /> },
-      { name: "Hibernate", icon: <LayersIcon /> },
-      { name: "Django", icon: <LayersIcon /> },
-      { name: "Flask", icon: <LayersIcon /> },
-      { name: "React.js", icon: <LayersIcon /> },
-      { name: "Tailwind CSS", icon: <LayersIcon /> },
-      { name: "Bootstrap", icon: <LayersIcon /> },
+      { name: "Spring Boot", icon: <SkillIconSpring /> },
+      { name: "Spring Security", icon: <SkillIconSpringSecurity /> },
+      { name: "Angular", icon: <SkillIconAngular /> },
+      { name: "RxJS", icon: <SkillIconRxJs /> },
+      { name: "Hibernate", icon: <SkillIconHibernate /> },
+      { name: "React.js", icon: <SkillIconReact /> },
+      { name: "Django", icon: <SkillIconDjango /> },
+      { name: "Flask", icon: <SkillIconFlask /> },
+      { name: "Tailwind CSS", icon: <SkillIconTailwind /> },
+      { name: "Bootstrap", icon: <SkillIconBootstrap /> },
     ],
   },
   {
-    title: "Databases",
+    title: "Data & APIs",
     skills: [
-      { name: "MySQL", icon: <DatabaseIcon /> },
-      { name: "PostgreSQL", icon: <DatabaseIcon /> },
-      { name: "MariaDB", icon: <DatabaseIcon /> },
-      { name: "AWS DynamoDB", icon: <DatabaseIcon /> },
+      { name: "MySQL", icon: <SkillIconDatabase /> },
+      { name: "PostgreSQL", icon: <SkillIconDatabase /> },
+      { name: "MariaDB", icon: <SkillIconDatabase /> },
+      { name: "AWS DynamoDB", icon: <SkillIconDatabase /> },
+      { name: "REST APIs", icon: <SkillIconRest /> },
     ],
   },
   {
-    title: "DevOps & Tools",
+    title: "Observability & DevOps",
     skills: [
-      { name: "Docker", icon: <CpuIcon /> },
-      { name: "Jenkins", icon: <CpuIcon /> },
-      { name: "Git & GitHub", icon: <CpuIcon /> },
-      { name: "AWS", icon: <CpuIcon /> },
-      { name: "Nginx", icon: <CpuIcon /> },
-      { name: "Linux", icon: <CpuIcon /> },
-      { name: "Bash", icon: <CpuIcon /> },
-      { name: "Postman", icon: <CpuIcon /> },
+      { name: "Docker", icon: <SkillIconDocker /> },
+      { name: "Kubernetes", icon: <SkillIconK8s /> },
+      { name: "Jenkins", icon: <SkillIconJenkins /> },
+      { name: "Git & GitHub", icon: <SkillIconGit /> },
+      { name: "AWS", icon: <SkillIconAws /> },
+      { name: "Nginx", icon: <SkillIconNginx /> },
+      { name: "Linux", icon: <SkillIconLinux /> },
+      { name: "Bash", icon: <SkillIconTerminal /> },
+      { name: "Postman", icon: <SkillIconPostman /> },
+      { name: "Grafana", icon: <SkillIconGrafana /> },
+      { name: "Prometheus", icon: <SkillIconPrometheus /> },
+      { name: "Tempo", icon: <SkillIconTempo /> },
+      { name: "OpenTelemetry", icon: <SkillIconOpenTelemetry /> },
     ],
   },
   {
-    title: "Methodologies",
+    title: "Practices",
     skills: [
-        { name: "Microservices", icon: <BriefcaseIcon /> },
-        { name: "MVC", icon: <BriefcaseIcon /> },
-        { name: "OOP", icon: <BriefcaseIcon /> },
-    ]
-  }
+      { name: "Microservices", icon: <SkillIconMicroservices /> },
+      { name: "MVC", icon: <SkillIconMVC /> },
+      { name: "OOP", icon: <SkillIconOOP /> },
+      { name: "Agile / SDLC", icon: <SkillIconAgile /> },
+    ],
+  },
 ];
 
 export const EXPERIENCE_DATA: Experience[] = [
     {
         title: "Software Engineer",
-        company: "SuffixEsolutions",
-        dates: "August 2024 - Present",
+        company: "NDZ, Kochi",
+        dates: "Sep 25, 2025 - Present",
         description: [
-            "Develop and maintain scalable backend services using Java Spring Boot and Hibernate.",
-            "Build full-featured web applications with Python Django, including robust user authentication systems.",
-            "Create dynamic and responsive front-end interfaces using React.js.",
-            "Streamline deployment by implementing Docker containers and CI/CD pipelines with Jenkins."
+            "Build and maintain scalable backend services with Java and Spring Boot.",
+            "Develop production-ready Angular interfaces and improve user workflow performance.",
+            "Implement monitoring with Grafana, Prometheus, Tempo, and OpenTelemetry for faster troubleshooting.",
+            "Collaborate on live project delivery with a focus on stability, observability, and release quality."
         ]
     },
     {
@@ -157,14 +207,14 @@ export const EXPERIENCE_DATA: Experience[] = [
 export const PROJECTS_DATA: Project[] = [
     {
         title: "Hospital Management System",
-        image: "https://picsum.photos/seed/hms/800/600",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
         description: "An end-to-end system for patients to register and book doctor appointments. Features a Spring Boot backend and a React front end.",
         tags: ["Java", "Spring Boot", "React", "Hibernate"],
         codeLink: "https://github.com/Anishsony1999"
     },
     {
         title: "Travel Recommendation Engine",
-        image: "https://picsum.photos/seed/travel/800/600",
+        image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
         description: "A full-stack tourist application with a Java backend and a Python-based recommendation engine to suggest attractions and hotels.",
         tags: ["Java", "Python", "Spring Boot", "Hibernate","Django"],
         codeLink: "https://github.com/Anishsony1999/Treavel",
