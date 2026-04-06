@@ -31,6 +31,18 @@
         height: 100%;
         z-index: 0;
       }
+      .aurora-bg {
+        position: fixed;
+        inset: -10% -20%;
+        background:
+          radial-gradient(circle at 18% 22%, rgba(14, 165, 233, 0.14), transparent 36%),
+          radial-gradient(circle at 82% 18%, rgba(34, 211, 238, 0.12), transparent 32%),
+          radial-gradient(circle at 52% 84%, rgba(59, 130, 246, 0.12), transparent 40%);
+        filter: blur(6px);
+        z-index: 0;
+        animation: aurora-shift 18s ease-in-out infinite alternate;
+        pointer-events: none;
+      }
 
       /* Custom Cursor */
       .custom-cursor, .custom-cursor-follower {
@@ -86,7 +98,7 @@
         to { opacity: 1; transform: translateY(0); }
       }
       .animate-fadeInUp {
-        animation: fadeInUp 1s ease-out forwards;
+        animation: fadeInUp 2s ease-out forwards;
       }
       
       /* Floating Text Animation */
@@ -105,6 +117,218 @@
         line-height: 1.2em;
         overflow: hidden;
         vertical-align: bottom;
+      }
+      .java-flame-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 0.8rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(34, 211, 238, 0.4);
+        background: linear-gradient(120deg, rgba(8, 47, 73, 0.35), rgba(15, 23, 42, 0.6));
+        color: #a5f3fc;
+        font-size: 0.78rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .java-flame-dot {
+        width: 0.65rem;
+        height: 0.65rem;
+        border-radius: 9999px;
+        background: radial-gradient(circle, #22d3ee 0%, #0284c7 60%, transparent 70%);
+        box-shadow: 0 0 14px rgba(34, 211, 238, 0.75);
+        animation: java-flame-pulse 1.3s ease-in-out infinite;
+      }
+      .spring-chip {
+        padding: 0.32rem 0.75rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        background: rgba(8, 47, 73, 0.35);
+        color: #bae6fd;
+        font-size: 0.76rem;
+        animation: spring-chip-pulse 2.6s ease-in-out infinite;
+      }
+      .monitoring-panel {
+        border: 1px solid rgba(14, 165, 233, 0.3);
+        background: linear-gradient(160deg, rgba(2, 6, 23, 0.82), rgba(15, 23, 42, 0.55));
+        border-radius: 1rem;
+        padding: 1rem;
+        -webkit-backdrop-filter: blur(6px);
+                backdrop-filter: blur(6px);
+        box-shadow: 0 16px 40px rgba(8, 47, 73, 0.35);
+      }
+      .monitoring-panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.8rem;
+      }
+      .monitoring-grid {
+        display: grid;
+        gap: 0.7rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .monitoring-card {
+        border-radius: 0.75rem;
+        border: 1px solid rgba(51, 65, 85, 0.7);
+        background: rgba(15, 23, 42, 0.75);
+        padding: 0.7rem 0.8rem;
+      }
+      .monitoring-name {
+        color: #94a3b8;
+        font-size: 0.74rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+      }
+      .monitoring-value {
+        color: #e2e8f0;
+        font-size: 1.02rem;
+        font-weight: 700;
+      }
+      .monitoring-dot {
+        width: 0.58rem;
+        height: 0.58rem;
+        border-radius: 9999px;
+      }
+      .monitoring-dot-ok {
+        background: #22c55e;
+        box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+      }
+      .monitoring-dot-warn {
+        background: #f59e0b;
+        box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
+      }
+      .impact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+      .impact-card {
+        border-radius: 1rem;
+        border: 1px solid rgba(56, 189, 248, 0.28);
+        background: linear-gradient(150deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.65));
+        padding: 1.1rem 1rem;
+        text-align: center;
+        -webkit-backdrop-filter: blur(7px);
+                backdrop-filter: blur(7px);
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+      .impact-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(34, 211, 238, 0.62);
+        box-shadow: 0 14px 30px rgba(8, 47, 73, 0.35);
+      }
+      .impact-value {
+        color: #e0f2fe;
+        font-size: 1.8rem;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .impact-label {
+        margin-top: 0.4rem;
+        color: #94a3b8;
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .project-filter-chip {
+        border-radius: 9999px;
+        border: 1px solid rgba(71, 85, 105, 0.8);
+        padding: 0.4rem 0.82rem;
+        background: rgba(15, 23, 42, 0.72);
+        color: #cbd5e1;
+        font-size: 0.78rem;
+        transition: all 0.2s ease;
+      }
+      .project-filter-chip:hover {
+        border-color: rgba(34, 211, 238, 0.45);
+        color: #e0f2fe;
+      }
+      .project-filter-chip-active {
+        border-color: rgba(34, 211, 238, 0.8);
+        background: rgba(8, 47, 73, 0.7);
+        color: #a5f3fc;
+        box-shadow: 0 0 16px rgba(34, 211, 238, 0.22);
+      }
+      .case-study-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      .case-study-card {
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        border-radius: 1rem;
+        background: linear-gradient(155deg, rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 0.72));
+        padding: 1rem;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .case-study-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(34, 211, 238, 0.62);
+      }
+      .case-metric-chip {
+        border-radius: 9999px;
+        border: 1px solid rgba(71, 85, 105, 0.8);
+        padding: 0.28rem 0.65rem;
+        font-size: 0.72rem;
+        color: #cbd5e1;
+        background: rgba(15, 23, 42, 0.72);
+      }
+      .testimonial-card {
+        max-width: 760px;
+        margin: 0 auto;
+        border-radius: 1rem;
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        background: linear-gradient(160deg, rgba(15, 23, 42, 0.78), rgba(2, 6, 23, 0.76));
+        padding: 1.4rem;
+      }
+      .testimonial-quote {
+        color: #e2e8f0;
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+      .testimonial-name {
+        margin-top: 1rem;
+        color: #67e8f9;
+        font-weight: 700;
+      }
+      .testimonial-role {
+        color: #94a3b8;
+        font-size: 0.84rem;
+      }
+      .testimonial-dot {
+        width: 0.56rem;
+        height: 0.56rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(148, 163, 184, 0.55);
+        background: rgba(15, 23, 42, 0.9);
+      }
+      .testimonial-dot-active {
+        border-color: rgba(34, 211, 238, 0.85);
+        background: rgba(34, 211, 238, 0.85);
+      }
+      .back-to-top {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(34, 211, 238, 0.45);
+        background: rgba(2, 6, 23, 0.82);
+        color: #67e8f9;
+        z-index: 70;
+        opacity: 0;
+        transform: translateY(8px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      .back-to-top-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
       }
 
       /* Experience timeline animation */
@@ -142,6 +366,37 @@
           grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
           gap: 1rem;
       }
+      .core-stack-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1rem;
+      }
+      .core-stack-card {
+          border: 1px solid rgba(14, 165, 233, 0.25);
+          background: linear-gradient(145deg, rgba(15, 23, 42, 0.85), rgba(12, 18, 35, 0.5));
+          border-radius: 0.9rem;
+          padding: 1rem 1.1rem;
+          -webkit-backdrop-filter: blur(6px);
+                  backdrop-filter: blur(6px);
+          animation: card-float 5s ease-in-out infinite;
+          transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .core-stack-card:hover {
+          transform: translateY(-5px);
+          border-color: rgba(34, 211, 238, 0.7);
+          box-shadow: 0 14px 30px rgba(34, 211, 238, 0.18);
+      }
+      .core-stack-title {
+          color: #e2e8f0;
+          font-size: 1rem;
+          font-weight: 700;
+          margin-bottom: 0.45rem;
+      }
+      .core-stack-detail {
+          color: #94a3b8;
+          font-size: 0.86rem;
+          line-height: 1.4;
+      }
       .skill-item {
           background: rgba(15, 23, 42, 0.6);
           border: 1px solid rgb(51, 65, 85);
@@ -155,6 +410,8 @@
           gap: 0.75rem;
           transition: transform 0.2s ease-out, background 0.2s ease-out, border-color 0.2s ease-out;
           cursor: default;
+          animation: skill-fade-rise 0.7s ease forwards;
+          opacity: 0;
       }
       .skill-item:hover {
           transform: translateY(-5px) scale(1.05);
@@ -162,10 +419,17 @@
           border-color: rgb(14, 165, 233);
       }
       .skill-item .skill-icon {
-          width: 2.5rem; /* 40px */
-          height: 2.5rem; /* 40px */
+          width: 2.75rem;
+          height: 2.75rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           color: rgb(148, 163, 184); /* slate-400 */
           transition: color 0.2s;
+      }
+      .skill-item .skill-icon svg {
+          width: 100%;
+          height: 100%;
       }
       .skill-item:hover .skill-icon {
           color: rgb(56, 189, 248); /* sky-400 */
@@ -175,9 +439,55 @@
           color: rgb(203, 213, 225);
           font-size: 0.875rem;
       }
+      .skill-item-java {
+          border-color: rgba(34, 211, 238, 0.65);
+          background: linear-gradient(140deg, rgba(8, 47, 73, 0.55), rgba(15, 23, 42, 0.88));
+          box-shadow: 0 10px 24px rgba(14, 165, 233, 0.18);
+      }
+      .skill-item-java .skill-name {
+          color: #cffafe;
+          font-weight: 600;
+      }
+      @keyframes skill-fade-rise {
+          from { opacity: 0; transform: translateY(12px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes card-float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-6px); }
+      }
+      @keyframes java-flame-pulse {
+          0%, 100% { transform: scale(0.9); opacity: 0.8; }
+          50% { transform: scale(1.16); opacity: 1; }
+      }
+      @keyframes spring-chip-pulse {
+          0%, 100% { box-shadow: 0 0 0 rgba(56, 189, 248, 0); transform: translateY(0); }
+          50% { box-shadow: 0 0 18px rgba(56, 189, 248, 0.18); transform: translateY(-2px); }
+      }
+      @keyframes aurora-shift {
+          0% { transform: translate3d(-2%, 0, 0) scale(1); }
+          100% { transform: translate3d(2%, 1%, 0) scale(1.05); }
+      }
+      @media (max-width: 640px) {
+        .monitoring-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .aurora-bg,
+        .java-flame-dot,
+        .spring-chip,
+        .core-stack-card,
+        .skill-item,
+        .animate-fadeInUp,
+        .sliding-text-item {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
 
     </style>
-
+
   <script type="importmap">
 {
   "imports": {
@@ -187,10 +497,10 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/portfolio/assets/index-BA9r5QYq.js"></script>
-  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-B66138DY.css">
+  <script type="module" crossorigin src="/portfolio/assets/index-DX4zPBuk.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-DNjR3Cyh.css">
 </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
