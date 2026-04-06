@@ -4,8 +4,11 @@ const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
+  { name: 'v02 Focus', href: '#v02-focus' },
+  { name: 'Impact', href: '#impact' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Case Studies', href: '#case-studies' },
   { name: 'Contact', href: '#contact' },
 ];
 
